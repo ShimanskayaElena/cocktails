@@ -1,0 +1,46 @@
+<p-card>
+  <p-toolbar>
+    <div class="container">
+      <input
+        type="text"
+        pInputText
+        [formControl]="search" 
+        class="flex-auto" 
+        autocomplete="off" 
+        placeholder="Search" />
+   
+      <p-button 
+        icon="pi pi-search"
+        [rounded]="true" 
+        [outlined]="true" 
+        [loading]="loading1" 
+        (onClick)="onLoad()" />
+
+      <p-button
+        icon="pi pi-sparkles"
+        [rounded]="true" 
+        [outlined]="true" 
+        [loading]="loading2" 
+        (onClick)="onShowRandomCocktail()" />
+    </div>
+  </p-toolbar>
+</p-card>
+
+<p-dialog header="" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+  @if ( cocktail ) {
+    <h1>{{ cocktail.strDrink }}</h1>
+    <div>
+        <img src="{{ cocktail.strDrinkThumb }}" width="300" height="300">
+        <div>Glass: {{ cocktail.strGlass }}</div>
+        <div>Instructions: {{ cocktail.strInstructions }}</div>
+        <div>Ingredients:</div>
+        @for (ingredient of ingredients; track ingredient) {
+            @if ( cocktail['strIngredient' + ingredient] != null) {
+                <div>{{ ingredient }}. {{ cocktail['strIngredient' + ingredient] }}</div>
+            }
+        }
+    </div>
+  }
+</p-dialog>  
+
+<router-outlet />

@@ -1,0 +1,14 @@
+<h1>Cocktails List</h1>
+<div class="cochtails-container">
+  @if (cochtails && cochtails.length > 0) {
+    @for (coktail of cochtails; track coktail.idDrink) {
+      <div (click)="onShowDetailsCoktail($event, coktail.idDrink)" class="cochtail-card">
+        <h4>{{ coktail.strDrink }}</h4>
+        <div>Glass: {{ coktail.strGlass }}</div>
+        <img src="{{ coktail.strDrinkThumb }}" width="120" height="120">
+      </div>
+    } 
+  } @else {
+    <div>Ничего не найдено...</div>
+  }
+</div>

@@ -1,0 +1,14 @@
+@if ( cocktail ) {
+    <h1>{{ cocktail.strDrink }}</h1>
+    <div>
+        <img src="{{ cocktail.strDrinkThumb }}" width="300" height="300">
+        <div>Glass: {{ cocktail.strGlass }}</div>
+        <div>Instructions: {{ cocktail.strInstructions }}</div>
+        <div>Ingredients:</div>
+        @for (ingredient of ingredients; track ingredient) {
+            @if ( cocktail['strIngredient' + ingredient] != null) {
+                <div>{{ ingredient }}. {{ cocktail['strIngredient' + ingredient] }}</div>
+            }
+        }
+    </div>
+}

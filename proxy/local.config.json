@@ -1,0 +1,11 @@
+{
+    "/api": {
+        "target": "http://thecocktaildb.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+          "^/api": ""
+        }
+    }
+  }
