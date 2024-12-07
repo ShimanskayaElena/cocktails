@@ -91,6 +91,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options" : {
+            "baseHref" : "https://shimanskayaelena.github.io/cocktails/",
+            "buildTarget" : "cocktails:build:production",
+            "repo": "https://github.com/ShimanskayaElena/cocktails.git"
+          }
         }
       }
     }
