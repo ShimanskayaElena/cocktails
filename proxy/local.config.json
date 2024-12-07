@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "http://thecocktaildb.com/api/json/v1/1/",
+        "target": "https://thecocktaildb.com/api/json/v1/1/",
         "secure": false,
         "logLevel": "debug",
         "changeOrigin": true,
