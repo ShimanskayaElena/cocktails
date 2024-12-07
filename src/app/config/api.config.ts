@@ -1,4 +1,8 @@
-const REMOTE_SERVER_URL = '/api/api/json/v1/1/';
+import { environment } from '../../environments/environment';
+
+// const REMOTE_SERVER_URL = '/api/api/json/v1/1/';
+
+const REMOTE_SERVER_URL = environment.apiUrl;
 
 export const apiConfig = {
     GET_SEARCH_BY_NAME :   `${REMOTE_SERVER_URL}search.php`,
