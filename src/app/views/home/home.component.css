@@ -1,7 +1,28 @@
 .container {
   display: flex;
-  justify-content:space-between;
-  width: 50%;
-  max-width: 400px;
+  justify-content: center;
   margin-bottom: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 375px) {
+  .container {
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1920px) {
+  
 }
